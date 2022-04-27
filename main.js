@@ -160,7 +160,7 @@ console.log(fizzBuzz());
 
 /**
  * You're now a baseball game point recorder.
- * Given a list of strings, each string can be one of the 4 following types:
+ * Given a list of strings and numbers:
  * Integer (one round's score): Directly represents the number of points you get in this round.
  * "+" (one round's score): Represents that the points you get in this round are the sum of the last two valid round's points.
  * "D" (one round's score): Represents that the points you get in this round are the doubled data of the last valid round's points.
@@ -168,9 +168,11 @@ console.log(fizzBuzz());
  * Each round's operation is permanent and could have an impact on the round before and the round after.
  * You need to return the sum of the points you could get in all the rounds.
  * 
+ * NOTE: THE FIRST 2 NUMBERS WILL ALWAYS BE PROVIDED YOU DON'T NEED TO HAVE A CHECK FOR THEM.
+ * 
  * EXAMPLE 1:
  * 
- * Input: ["5","2","C","D","+"]
+ * Input: [5, 2,"C","D","+"]
  * Output: 30
  * Explanation: 
  * Round 1: You could get 5 points. The sum is: 5.
@@ -181,7 +183,7 @@ console.log(fizzBuzz());
  * 
  * 
  * EXAMPLE 2:
- * Input: ["5","-2","4","C","D","9","+","+"]
+ * Input: [5, -2, 4, "C", "D", 9, "+", "+"]
  * Output: 27
  * Explanation: 
  * Round 1: You could get 5 points. The sum is: 5.
