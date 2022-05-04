@@ -38,13 +38,13 @@ function sumValueAboveFive(values) {
             }
             
         }
-        
-        )
+    
+    )
 
-    console.log(summed);
+    return summed;
 }
 
-sumValueAboveFive(myArray);
+console.log(sumValueAboveFive(myArray));
 
 
 // expected output: 43
@@ -79,26 +79,23 @@ console.log(information.interest.outdoor[0].hiking[2])
 
 // TODO: write your code below this line
 
-function checkIfAnagram(word1, word2) {
+function anagramFunc(word1, word2) {
+    /* Checks words passed form an anagram */
 
     if (Array.from(word1).sort().join("") === Array.from(word2).sort().join("")) {
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+        return true;
 
+    }
     
+    return false;
 
 }
-
-checkIfAnagram("ssap", "pass");
-
 
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-// console.log(anagramFunc("cinema", "iceman")); // expected output: true
-// console.log(anagramFunc("jupiter", "jubiter")); // expected output: false
+console.log(anagramFunc("cinema", "iceman")); // expected output: true
+console.log(anagramFunc("jupiter", "jubiter")); // expected output: false
 
 // QUESTION 5
 
@@ -107,12 +104,25 @@ checkIfAnagram("ssap", "pass");
 
 // TODO: write your code below this line
 
+function palindromeFunc(word) {
+    /* checks if the word passed is a palindrome */
+    
+    if (word === Array.from(word).reverse().join("")) {
+        return true;
+
+    }
+
+    return false;
+    
+
+}
+
 
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-// console.log(palindromeFunc("racecar")); // expected output: true
-// console.log(palindromeFunc("nurse run")); // expected output: false
+console.log(palindromeFunc("racecar")); // expected output: true
+console.log(palindromeFunc("nurse run")); // expected output: false
 
 // QUESTION 6
 
@@ -133,13 +143,33 @@ checkIfAnagram("ssap", "pass");
 function getGrade(score) {
     let grade;
     // Write your code here
-    
+
+    if (score > 25 && score <= 30) {
+        grade = "A";
+
+    } else if (score > 20 && score <= 25){
+        grade = "B";
+
+    } else if (score > 15 && score <= 20) {
+        grade = "C";
+
+    } else if (score > 10 && score <= 15) {
+        grade = "D";
+
+    } else if (score > 5 && score <=10 ) {
+        grade = "E";
+
+    } else if (score > 0 && score <=5 ) {
+        grade = "F";
+
+    }
+
     return grade;
 }
 // TODO: write your code above this line
 
 // The line of code below will be used for testing your function. don't change it
-// console.log(getGrade(25)); // expected output: B 
+console.log(getGrade(20)); // expected output: B 
 
 // QUESTION 7
 
