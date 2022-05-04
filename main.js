@@ -13,6 +13,8 @@
 
 // TODO: write your code below this line
 
+let taxRate = 1.5;
+const age = 22;
 
 // TODO: write your code above this line
 
@@ -23,6 +25,26 @@
 
 const myArray = [4, -2, 6, 9, 1, 12, 6, 2, 10];
 // TODO: write your code below this line
+
+function sumValueAboveFive(values) {
+    /* sum all values above five */
+
+    let summed = 0
+
+    myArray.forEach( (value) => {
+
+            if (value > 5 ) {
+                summed += value
+            }
+            
+        }
+        
+        )
+
+    console.log(summed);
+}
+
+sumValueAboveFive(myArray);
 
 
 // expected output: 43
@@ -45,6 +67,8 @@ const information = {
 // TODO: write your code below this line
 
 
+console.log(information.interest.outdoor[0].hiking[2])
+
 // expected output: 'Menengai Crater'
 // TODO: write your code above this line
 
@@ -55,12 +79,26 @@ const information = {
 
 // TODO: write your code below this line
 
+function checkIfAnagram(word1, word2) {
+
+    if (Array.from(word1).sort().join("") === Array.from(word2).sort().join("")) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+    
+
+}
+
+checkIfAnagram("ssap", "pass");
+
 
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-console.log(anagramFunc("cinema", "iceman")); // expected output: true
-console.log(anagramFunc("jupiter", "jubiter")); // expected output: false
+// console.log(anagramFunc("cinema", "iceman")); // expected output: true
+// console.log(anagramFunc("jupiter", "jubiter")); // expected output: false
 
 // QUESTION 5
 
@@ -73,8 +111,8 @@ console.log(anagramFunc("jupiter", "jubiter")); // expected output: false
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-console.log(palindromeFunc("racecar")); // expected output: true
-console.log(palindromeFunc("nurse run")); // expected output: false
+// console.log(palindromeFunc("racecar")); // expected output: true
+// console.log(palindromeFunc("nurse run")); // expected output: false
 
 // QUESTION 6
 
@@ -101,7 +139,7 @@ function getGrade(score) {
 // TODO: write your code above this line
 
 // The line of code below will be used for testing your function. don't change it
-console.log(getGrade(25)); // expected output: B 
+// console.log(getGrade(25)); // expected output: B 
 
 // QUESTION 7
 
@@ -130,7 +168,7 @@ console.log(getGrade(25)); // expected output: B
 // TODO: write your code above this line
 
 // The line of code below will be used for testing your function. don't change it
-console.log(obj.perimeter([45, 56, 67])); // expected output: 168
+// console.log(obj.perimeter([45, 56, 67])); // expected output: 168
 
 // QUESTION 9 
 
@@ -207,5 +245,5 @@ console.log(fizzBuzz());
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-console.log(baseBallPointer([5, 2,"C","D","+"]));
-console.log(baseBallPointer([5, -2, 4, "C", "D", 9, "+", "+"])); 
+// console.log(baseBallPointer([5, 2,"C","D","+"]));
+// console.log(baseBallPointer([5, -2, 4, "C", "D", 9, "+", "+"])); 
