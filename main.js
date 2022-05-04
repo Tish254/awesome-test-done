@@ -141,6 +141,8 @@ console.log(palindromeFunc("nurse run")); // expected output: false
 
 // TODO: write your code below this line
 function getGrade(score) {
+    /* Displays the appropriate grade based on the score */
+
     let grade;
     // Write your code here
 
@@ -183,6 +185,23 @@ console.log(getGrade(20)); // expected output: B
 
 // TODO: write your code below this line
 
+class Polygon {
+    /* Creates a Polygon */
+    
+    constructor () {
+        this.arryLengths;
+
+    }
+
+    perimeter (arryLengths) {
+        /* Called to calculate the Polygons Perimeter returning the value */
+
+        this.arryLengths = arryLengths;
+
+        return this.arryLengths.reduce((previousVal, currentVal) => previousVal + currentVal, 0);
+    }
+}
+
 
 // TODO: write your code above this line
 
@@ -194,11 +213,12 @@ console.log(getGrade(20)); // expected output: B
 
 // TODO: write your code below this line
 
+const obj = new Polygon();
 
 // TODO: write your code above this line
 
 // The line of code below will be used for testing your function. don't change it
-// console.log(obj.perimeter([45, 56, 67])); // expected output: 168
+console.log(obj.perimeter([45, 56, 67])); // expected output: 168
 
 // QUESTION 9 
 
