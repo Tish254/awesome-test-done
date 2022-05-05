@@ -171,7 +171,7 @@ function getGrade(score) {
 // TODO: write your code above this line
 
 // The line of code below will be used for testing your function. don't change it
-console.log(getGrade(20)); // expected output: B 
+console.log(getGrade(25)); // expected output: B 
 
 // QUESTION 7
 
