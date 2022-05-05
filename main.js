@@ -232,12 +232,40 @@ console.log(obj.perimeter([45, 56, 67])); // expected output: 168
  */
 
 // TODO: write your code below this line
+
+function checkFizzBuzz(value) {
+    /* Returns buzz or fizz or buzzfizz based on the input */
+    if (value % 3 === 0 && value % 5 === 0) {
+        return 'fizzbuzz';
+        
+    }
+
+    if (value % 3 === 0) {
+        return 'fizz';
+
+    }
+
+    if (value % 5 === 0) {
+        return 'buzz';
+    
+    }
+
+    return value;
+
+}
+
 const fizzBuzz = () => {
     for(let i = 0; i <= 21; i++) {
         // write your code here...
+        
+        console.log(checkFizzBuzz(i));
+        
 
     }
 }
+
+
+
 
 // TODO: write your code above this line
 
