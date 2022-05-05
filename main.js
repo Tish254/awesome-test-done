@@ -320,8 +320,53 @@ console.log(fizzBuzz());
 // TODO: write your code below this line
 
 
+function baseBallPointer(arrValues) {
+    /* Called to calculate and return the total base ball points */
+
+    // removes the two values including "C" from the arrValues where "C" appears  leaving only valid data
+    arrValues.splice(arrValues.indexOf('C')-1, 2);
+
+    
+    // this Array holds points properly calculated according to the rules for every round
+    let passedValues = [];
+    
+    // Loops to push calculated round points in the passedValues array to be used to calculate total points.
+    
+    let lenValues = arrValues.length;
+
+    for (let i = 0; i < lenValues; i++ ) {
+
+        currentVal = arrValues[i];
+
+        switch (currentVal) { 
+            case "+":
+                passedValues.push(passedValues[passedValues.length - 1] + passedValues[passedValues.length - 2]);
+
+                break;
+
+            case "D":
+                passedValues.push(passedValues[passedValues.length - 1]*2);
+
+                break;
+            
+            case +currentVal:
+                passedValues.push(currentVal);
+
+                break;
+            
+            default:
+                console.log('Invalid entry found');    
+            
+        }
+    }
+
+    return passedValues.reduce((sum, current) => sum + current);
+
+}
+
+
 // TODO: write your code above this line
 
 // The lines of code below will be used for testing your function. don't change them
-// console.log(baseBallPointer([5, 2,"C","D","+"]));
-// console.log(baseBallPointer([5, -2, 4, "C", "D", 9, "+", "+"])); 
+console.log(baseBallPointer([5, 2,"C","D","+"]));
+console.log(baseBallPointer([5, -2, 4, "C", "D", 9, "+", "+"])); 
